@@ -1,13 +1,11 @@
 <!-- STUDENT-SNAPSHOT-NOTE -->
-# Student implementation - 2330036177
+# Student implementation — 2330036177
 
-The [complete current source snapshot](https://github.com/nnnancy-oi/BA3073_AI_Learning_Assistant_2330036177/blob/main/BA3073_2330036177_source.zip) includes this project, the revised report-generation prompt, current deployment helpers and verification notes. Use that archive to reproduce the verified deployment; the expanded tree retains the imported teaching baseline with the revised essay prompt also committed separately. See [SUBMISSION_STATUS.md](SUBMISSION_STATUS.md) for actual completed work and remaining requirements.
-
-Local Docker, ACR transfer, ECS runtime, live model generation and current interface captures are verified. **Domain/HTTPS and independent proxy access control (Task 3) remain incomplete.** No credentials or runtime data are included.
+Use [the complete current source snapshot](https://github.com/nnnancy-oi/BA3073_AI_Learning_Assistant_2330036177/blob/main/BA3073_2330036177_source.zip). Local Docker, ACR and ECS direct-IP deployment are verified. **Task 3 remains incomplete:** Nginx and an experimental protected HTTPS tunnel were installed, but full UI access fails on authentication redirects for static assets. DNS A/Certbot requirements remain missing. See [SUBMISSION_STATUS.md](SUBMISSION_STATUS.md).
 
 ---
 
-# BA3073 Take-home Individual Assignment <br> "From AI Agent to Cloud Service"
+ BA3073 Take-home Individual Assignment <br> "From AI Agent to Cloud Service"
 
 In this assignment, you will deploy the supplied AI Learning Assistant as a web service on an Aliyun ECS instance. The application uses a FastAPI backend, a browser-based user interface, SQLite storage, a Qwen-compatible model API, and Docker Compose. You will first test the service through the ECS public IP and then publish it securely through a domain name.
 

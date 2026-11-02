@@ -1,25 +1,12 @@
-# BA3073 verified student source - 2330036177
+# BA3073 verified source — 2330036177
 
-Updated 2 November 2026. Task 3 remains incomplete; do not describe this as a fully complete assignment.
+Updated 2026-11-02T22:37:06+08:00. Task 3 is incomplete.
 
-The complete current source is supplied as BA3073_2330036177_source.zip at the repository root. Use that snapshot to reproduce the verified deployment. The expanded repository tree retains the imported teaching baseline, with the revised essay prompt also committed as an individual file.
+Local Docker, revised essay prompt, 12 frontend/117 backend tests, local amd64 build, private ACR push, matching digest-pinned ECS pull, direct-IP UI and one real cloud model-generated report are verified. Clean dependency build failed on Docker Hub; Dockerfile.cached reused a matching runtime.
 
-Verified work:
+Latest Task 3 attempt: official cloudflared 2026.10.7 checksum-verified and installed; Nginx configured at 127.0.0.1:18080; both services active. Temporary endpoint: https://style-mixing-van-advancement.trycloudflare.com/ui/
+Anonymous request: HTTP 302 to email authentication, TLS certificate verification result 0. The student completed the email PIN, but JavaScript/CSS redirected to authentication and failed CORS checks. Full application UI and persistent authorized admission are NOT verified. Backend direct-IP access remains restricted to the authorized /32; it has not been closed because the replacement path is unverified.
 
-- Local Docker project healthy, localhost-only binding, actual Safari interface and local-ui-check.txt PASS. Current local screenshot retained outside the source archive.
-- Revised BA3073 essay instructions in backend/pipelines/essay_html.py; 12 frontend and 117 backend tests passed. Clean dependency download failed at Docker Hub authorization; successful source-overlay builds reused existing matching-architecture runtime images via Dockerfile.cached.
-- Local amd64 image pushed to private Hangzhou ACR and pulled on ECS at the same digest: sha256:a93dc14f240116d4a95f6577689cf62d4560fbdd6147b05273f2a45324e4f266.
-- ECS container 92a08e22a1cf remains healthy after recreation. Existing mounts, settings and student account preserved; private consistent backup exists, restore untested.
-- Actual Chrome login interface verified at http://120.26.28.223:14242/ui/ after updating the source IPv4 /32 when the client network changed, and adding a one-host system proxy exception with explicit consent. No public all-source 14242 rule was added.
-- One real cloud service-core run generated HTML and PDF using qwen3.6-flash; original manifest/output retained outside source. Report was subsequently fact-checked and actual screenshots inserted.
-- Source repository made public after the user's explicit approval and GitHub reauthentication. Secrets, runtime data, generated artifacts and dependency folders excluded from the source archive.
+No student-controlled DNS A record to ECS or Certbot certificate on ECS. No domain purchased. Temporary provider hostnames are not equivalent to the specified architecture and may stop/change. Do not describe this as a completed Task 3. See docs/deployment/QUICK_TUNNEL.md.
 
-Still missing:
-
-- Authorized domain/subdomain, DNS and applicable mainland ICP filing/access requirements.
-- Actual Nginx, trusted HTTPS, independent proxy access gate, admission/rejection verification and domain/address-bar evidence.
-- Final report after Task 3. The current report is an interim draft.
-
-The ECS-origin public-IP self-check still times out; it remains FAIL in the preserved logs. Loopback health, authorized external HTTP and actual Chrome UI rendering are separate successful observations. No root cause is asserted for the self-request failure.
-
-Reports, browser captures, passwords, model settings, data/ and workspace/ are deliberately outside this source snapshot.
+The complete revised source is the ZIP at this repository root. The expanded tree retains the teaching baseline plus the separately committed essay prompt. Secrets, data, workspace, generated artifacts and dependencies are excluded. Public repository: https://github.com/nnnancy-oi/BA3073_AI_Learning_Assistant_2330036177
