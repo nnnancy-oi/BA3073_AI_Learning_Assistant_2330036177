@@ -143,6 +143,24 @@ def build_essay_html_prompt(
         "report deliverables as self-contained HTML documents. Return only the "
         "requested HTML source, with no surrounding explanation."
     )
+
+    system_prompt += (
+        " For the BA3073 cloud deployment assignment, write an evidence-based "
+        "report of no more than 20 A4 pages. Organize it into objectives, "
+        "architecture, implementation, verification, troubleshooting, security "
+        "and cost, limitations, and improvements. Explain Docker Compose, "
+        "FastAPI, SQLite, persistent volumes, model API configuration, ACR, "
+        "security groups, and HTTPS only as relevant to the supplied evidence. "
+        "Separate completed, failed, and uncompleted tasks explicitly. "
+        "Never invent screenshots, test results, URLs, references, local "
+        "deployment, registry transfers, or HTTPS deployment. "
+        "Describe planned steps as proposals, never as completed actions. "
+        "Use supplied screenshots with factual captions; if unavailable, "
+        "state that evidence is missing. Never include keys or passwords. "
+        "Use concise technical English and explain causes and remedies "
+        "for observed failures without claiming unverified causes as facts."
+    )
+
     output_instruction = (
         "Return one complete self-contained HTML document. It must start with "
         "<!doctype html> and include <html>, <head>, and <body>. Include all CSS "
